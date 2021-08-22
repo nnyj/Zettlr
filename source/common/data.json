@@ -14,7 +14,8 @@
         ".+?\\.textbundle"
     ],
     "poll_time": 5000,
-    "translation_api_url": "https://translate.zettlr.com/api/languages",
+    "translation_api_url_bak": "https://translate.zettlr.com/api/languages",
+    "translation_api_url": "0.0.0.0",
     "import_files": [
         [ "markdown",   "Markdown",                          "md", "markdown", "rmd", "mdx" ],
         [ "txt",        "Text",                              "txt" ],
