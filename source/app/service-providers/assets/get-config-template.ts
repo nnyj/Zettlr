@@ -128,6 +128,7 @@ export default function getConfigTemplate (): ConfigOptions {
       enableTableHelper: true, // Enable the table helper plugin
       indentUnit: 4, // The number of spaces to be added
       fontSize: 16, // The editor's font size in pixels
+      scrollZoom: true, // Whether the user can scroll by using Cmd/Ctrl+Wheel
       countChars: false, // Set to true to enable counting characters instead of words
       inputMode: 'default', // Can be default, vim, emacs
       boldFormatting: '**', // Can be ** or __

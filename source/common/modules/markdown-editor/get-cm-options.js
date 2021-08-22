@@ -111,7 +111,9 @@ module.exports = function () {
       readabilityAlgorithm: 'dale-chall',
       // If true, the editor will attempt to keep the cursor in the
       // middle of the line
-      typewriterMode: false
+      typewriterMode: false,
+      // Whether the scroll wheel w/ CmdOrCtrl zooms
+      scrollZoom: true
     }
   }
 }
