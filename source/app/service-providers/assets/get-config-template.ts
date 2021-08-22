@@ -65,7 +65,7 @@ export default function getConfigTemplate (): ConfigOptions {
     // Visible attachment filetypes
     attachmentExtensions: ATTACHMENT_EXTENSIONS,
     // UI related options
-    darkMode: false,
+    darkMode: true,
     alwaysReloadFiles: false, // Should Zettlr automatically load remote changes?
     autoDarkMode: 'off', // Possible values: 'off', 'system', 'schedule', 'auto'
     autoDarkModeStart: '22:00', // Switch into dark mode at this time
@@ -76,7 +76,7 @@ export default function getConfigTemplate (): ConfigOptions {
     sorting: 'natural', // Can be natural or based on ASCII values
     sortingTime: 'modtime', // can be modtime or creationtime
     muteLines: true, // Should the editor mute lines in distraction free mode?
-    fileManagerMode: 'thin', // thin = Preview or directories visible --- expanded = both visible --- combined = tree view displays also files
+    fileManagerMode: 'combined', // thin = Preview or directories visible --- expanded = both visible --- combined = tree view displays also files
     newFileNamePattern: '%id.md',
     newFileDontPrompt: false, // If true immediately creates files
     // Export options
@@ -229,7 +229,7 @@ export default function getConfigTemplate (): ConfigOptions {
     system: {
       deleteOnFail: false, // Whether to delete files if trashing them fails
       leaveAppRunning: false, // Whether to leave app running in the notification area (tray)
-      avoidNewTabs: true, // Whether to avoid opening new tabs for documents if possible
+      avoidNewTabs: false, // Whether to avoid opening new tabs for documents if possible
       iframeWhitelist: [ 'www.youtube.com', 'player.vimeo.com' ] // Contains a list of whitelisted iFrame prerendering domains
     },
     checkForBeta: false, // Should the user be notified of beta releases?
