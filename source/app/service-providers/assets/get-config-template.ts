@@ -127,7 +127,7 @@ export default function getConfigTemplate (): ConfigOptions {
       homeEndBehaviour: false, // If true, Home/End goes to start/end of a paragraph, false means start/end of line.
       enableTableHelper: true, // Enable the table helper plugin
       indentUnit: 4, // The number of spaces to be added
-      fontSize: 16, // The editor's font size in pixels
+      fontSize: 14, // The editor's font size in pixels
       scrollZoom: true, // Whether the user can scroll by using Cmd/Ctrl+Wheel
       countChars: false, // Set to true to enable counting characters instead of words
       inputMode: 'default', // Can be default, vim, emacs
@@ -137,7 +137,7 @@ export default function getConfigTemplate (): ConfigOptions {
       direction: 'ltr', // Can be set to rtl for right-to-left scripts such as Persian
       rtlMoveVisually: true, // Whether the cursor should move visually with arrows in RTL mode
       autoCorrect: {
-        active: true, // AutoCorrect is on by default
+        active: false, // AutoCorrect is on by default
         style: 'LibreOffice', // Default to LibreOffice style
         magicQuotes: {
           // Can be various quote pairs. The default characters (" and ')
