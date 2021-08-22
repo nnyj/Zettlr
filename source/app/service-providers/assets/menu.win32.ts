@@ -398,25 +398,37 @@ export default function getMenu (): MenuItemConstructorOptions[] {
           id: 'menu.reset_zoom',
           label: trans('menu.reset_zoom'),
           accelerator: 'Ctrl+0',
-          role: 'resetZoom'
+          // role: 'resetZoom'
+          click: function (menuitem, focusedWindow) {
+            focusedWindow?.webContents.send('shortcut', 'zoom-reset')
+          }
         },
         {
           id: 'menu.zoom_in',
           label: trans('menu.zoom_in'),
           accelerator: 'Ctrl+Plus',
-          role: 'zoomIn'
+          // role: 'zoomIn'
+          click: function (menuitem, focusedWindow) {
+            focusedWindow?.webContents.send('shortcut', 'zoom-in')
+          }
         },
         {
           id: 'menu.zoom_in',
           label: trans('menu.zoom_in'),
           accelerator: 'Ctrl+=',
-          role: 'zoomIn'
+          // role: 'zoomIn'
+          click: function (menuitem, focusedWindow) {
+            focusedWindow?.webContents.send('shortcut', 'zoom-in')
+          }
         },
         {
           id: 'menu.zoom_out',
           label: trans('menu.zoom_out'),
           accelerator: 'Ctrl+-',
-          role: 'zoomOut'
+          // role: 'zoomOut'
+          click: function (menuitem, focusedWindow) {
+            focusedWindow?.webContents.send('shortcut', 'zoom-out')
+          }
         },
         {
           type: 'separator'
