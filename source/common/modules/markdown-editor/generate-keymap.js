@@ -65,6 +65,8 @@ module.exports = function (editor) {
     keymap['Ctrl-K'] = 'markdownLink'
     keymap['Ctrl-I'] = 'markdownItalic'
     keymap['Ctrl-B'] = 'markdownBold'
+    keymap['Shift-Alt-0'] = "unfoldAll"
+    keymap['Alt-0'] = 'foldAll'
   }
 
   // Returns a CodeMirror keymap for the main editor, aware of potential settings.
