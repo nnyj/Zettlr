@@ -38,10 +38,6 @@ With Zettlr, writing professional texts is easy and motivating: Whether you are 
 
 [Visit our Website](https://zettlr.com/).
 
-## Changes from original repo
-
-- Restore ctrl+zoom functionality.
-
 ## Features
 
 - Available in over a dozen languages
