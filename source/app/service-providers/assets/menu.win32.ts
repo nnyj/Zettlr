@@ -407,6 +407,12 @@ export default function getMenu (): MenuItemConstructorOptions[] {
           role: 'zoomIn'
         },
         {
+          id: 'menu.zoom_in',
+          label: trans('menu.zoom_in'),
+          accelerator: 'Ctrl+=',
+          role: 'zoomIn'
+        },
+        {
           id: 'menu.zoom_out',
           label: trans('menu.zoom_out'),
           accelerator: 'Ctrl+-',
