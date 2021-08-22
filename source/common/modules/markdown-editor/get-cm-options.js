@@ -40,8 +40,10 @@ module.exports = function () {
     cursorScrollMargin: 60,
     // Disable cursor blinking, as we apply a @keyframes animation
     cursorBlinkRate: 0,
+    // Show line numbers
+    lineNumbers: true,
     // Specify the fold gutter
-    gutters: ['CodeMirror-foldgutter'],
+    gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
     // Default fold options
     foldOptions: {
       'widget': '\u00A0\u2026\u00A0', // nbsp ellipse nbsp
