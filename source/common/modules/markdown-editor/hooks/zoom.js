@@ -27,7 +27,7 @@ module.exports = (cm, zoomHook) => {
 
       // Divide by itself as absolute to either get -1 or +1
       let direction = e.deltaY / Math.abs(e.deltaY)
-      zoomHook(isNaN(direction) ? 0 : direction)
+      zoomHook(isNaN(direction) ? 0 : (direction > 0 ? -1 : 1)) // Reverse +1 and -1
     }
   }, { passive: true })
 }
