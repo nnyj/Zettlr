@@ -368,7 +368,7 @@ export default class Zettlr {
     await this._documentManager.init()
 
     // Finally, initiate a first check for updates
-    global.updates.check()
+    //global.updates.check()
   }
 
   /**

@@ -630,7 +630,7 @@ export default function getMenu (): MenuItemConstructorOptions[] {
               return
             }
 
-            global.updates.check()
+            //global.updates.check()
           }
         }
       ]
