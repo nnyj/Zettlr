@@ -22,7 +22,6 @@ import { CodeFileDescriptor, CodeFileMeta, MDFileDescriptor, MDFileMeta } from '
 import { FSALCodeFile, FSALFile } from '../fsal'
 import { codeFileExtensions, mdFileExtensions } from '../../../common/get-file-extensions'
 import generateFilename from '../../../common/util/generate-filename'
-import { app } from 'electron'
 
 const ALLOWED_CODE_FILES = codeFileExtensions(true)
 const MARKDOWN_FILES = mdFileExtensions(true)
@@ -212,11 +211,13 @@ export default class DocumentManager extends EventEmitter {
 
     if (isCode) {
       const file = await FSALCodeFile.parse(filePath, null)
-      app.addRecentDocument(file.path)
+      // app.addRecentDocument(file.path)
+      global.recentDocs.add(file.path)
       return file
     } else if (isMD) {
       const file = await FSALFile.parse(filePath, null)
-      app.addRecentDocument(file.path)
+      // app.addRecentDocument(file.path)
+      global.recentDocs.add(file.path)
       return file
     } else {
       throw new Error(`Could not load file ${filePath}: Invalid path provided`)
@@ -405,7 +406,11 @@ export default class DocumentManager extends EventEmitter {
       }
     }
 
+    // Notify whomever it concerns that the modification status has changed
+    this.emit('document-modified-changed')
+
     if (this.isClean()) {
+      // Indicate that now there are no modified documents anymore
       this.emit('documents-all-clean')
     }
   }
