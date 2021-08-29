@@ -499,12 +499,14 @@ export default class WindowManager extends EventEmitter {
   showMainWindow (): void {
     if (this._mainWindow === null) {
       const display = screen.getPrimaryDisplay()
-      const windowConfiguration = this._retrieveWindowPosition('main', {
-        top: display.workArea.y,
-        left: display.workArea.x,
-        width: display.workArea.width,
-        height: display.workArea.height
-      })
+      //const windowConfiguration = this._retrieveWindowPosition('main', {
+      //  top: display.workArea.y,
+      //  left: display.workArea.x,
+      //  width: display.workArea.width,
+      //  height: display.workArea.height
+      //})
+      // defaultSize to null so that it starts at half size
+      const windowConfiguration = this._retrieveWindowPosition('main', null)
 
       this._mainWindow = createMainWindow(windowConfiguration)
       this._hookMainWindow()
